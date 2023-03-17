@@ -5,7 +5,8 @@
   "description": "Use greedy algorithm for the Kruskal's Minimum Spanning Tree problem",
   "proxy": "https://algorithm-visualizer.org",
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
+    "startDocker": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
