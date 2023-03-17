@@ -87,7 +87,7 @@ docker build -f Dockerfile -t software .
 - After that, you can run the project by using the command below:
 
 ```
-docker run -it -p 4002:3001 software
+docker run -it -p 4002:3000 software
 ```
 
 - Open your browser and go to the link below:
