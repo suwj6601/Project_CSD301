@@ -44,13 +44,9 @@ class MarkdownRenderer extends Renderer {
 
     const link = ({ href, ...rest }) => {
       return /^#/.test(href) ? (
-        <a href={href} {...rest}>
-          {href}{" "}
-        </a>
+        <a href={href} {...rest} />
       ) : (
-        <a href={href} rel="noopener" {...rest}>
-          {href}{" "}
-        </a>
+        <a href={href} rel="noopener" target="_blank" {...rest} />
       );
     };
 
