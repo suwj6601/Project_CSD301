@@ -32,9 +32,36 @@ public class KruskalsMST {
 
 	// Starting point of program execution
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
 		// input edge of graph
-		List<Edge> graphEdges = inputEdge();
-		int V = graphEdges.size() - 1;
+		System.out.println("Enter the number of edges: ");
+		int V = Integer.parseInt(sc.nextLine());
+
+		// List<Edge> graphEdges = inputEdge();
+		List<Edge> graphEdges = new ArrayList<Edge>(
+				List.of(new Edge(0, 1, 5),
+						new Edge(1, 2, 1),
+						new Edge(2, 3, 4),
+						new Edge(0, 3, 5),
+						new Edge(1, 3, 2)));
+
+		// List<Edge> graphEdges = new ArrayList<Edge>(
+		// List.of(
+		// new Edge(0, 1, 4),
+		// new Edge(0, 7, 8),
+		// new Edge(1, 7, 11),
+		// new Edge(1, 2, 8),
+		// new Edge(7, 8, 7),
+		// new Edge(7, 6, 1),
+		// new Edge(2, 8, 2),
+		// new Edge(6, 8, 6),
+		// new Edge(2, 3, 7),
+		// new Edge(6, 5, 2),
+		// new Edge(2, 5, 4),
+		// new Edge(3, 5, 14),
+		// new Edge(3, 4, 9),
+		// new Edge(4, 5, 10)));
 
 		// Step 1: sort the edges in non-decreasing order
 		// (increasing with repetition allowed)
@@ -51,9 +78,8 @@ public class KruskalsMST {
 	public static List<Edge> inputEdge() {
 		Scanner sc = new Scanner(System.in);
 		List<Edge> graphEdge = new ArrayList<Edge>();
-		System.out.println("Enter the number of edges: ");
-		int noOfEdges = Integer.parseInt(sc.nextLine());
-		for (int i = 0; i < noOfEdges; i++) {
+
+		while (true) {
 			System.out.println("Enter the source vertex: ");
 			int src = Integer.parseInt(System.console().readLine());
 			System.out.println("Enter the destination vertex: ");
@@ -61,8 +87,18 @@ public class KruskalsMST {
 			System.out.println("Enter the weight of the edge: ");
 			int weight = Integer.parseInt(System.console().readLine());
 			graphEdge.add(new Edge(src, dest, weight));
-		}
+			System.out.println("Do you want to continue? (Y/N)");
+			String choice = sc.nextLine();
+			if (choice.equalsIgnoreCase("N")) {
+				break;
+			} else if (choice.equalsIgnoreCase("Y")) {
+				continue;
+			} else {
+				System.out.println("Invalid choice!");
+				break;
+			}
 
+		}
 		return graphEdge;
 	}
 

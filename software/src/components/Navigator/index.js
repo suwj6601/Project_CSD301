@@ -62,6 +62,7 @@ class Navigator extends React.Component {
     const refine = (string) => string.replace(/-/g, " ").replace(/[^\w ]/g, "");
     const refinedQuery = refine(query);
     const refinedValue = refine(value);
+
     return (
       new RegExp(`(^| )${refinedQuery}`, "i").test(refinedValue) ||
       new RegExp(refinedQuery, "i").test(
@@ -103,8 +104,6 @@ class Navigator extends React.Component {
                   opened={categoryOpened}
                 >
                   {algorithms.map((algorithm) => {
-                    console.log("algorithm", algorithm);
-
                     if (algorithm.key === "kruskals-minimum-spanning-tree") {
                       return (
                         <ListItem
@@ -126,6 +125,12 @@ class Navigator extends React.Component {
 
             return <></>;
           })}
+          <ListItem
+            indent
+            key="genarategraph"
+            to={"/genarategraph"}
+            label={"Genarate graph"}
+          />
         </div>
         <div className={styles.footer}></div>
       </nav>
