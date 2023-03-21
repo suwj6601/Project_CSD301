@@ -30,7 +30,6 @@ public class KruskalsMST {
 		}
 	}
 
-	// Starting point of program execution
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -39,29 +38,29 @@ public class KruskalsMST {
 		int V = Integer.parseInt(sc.nextLine());
 
 		// List<Edge> graphEdges = inputEdge();
-		List<Edge> graphEdges = new ArrayList<Edge>(
-				List.of(new Edge(0, 1, 5),
-						new Edge(1, 2, 1),
-						new Edge(2, 3, 4),
-						new Edge(0, 3, 5),
-						new Edge(1, 3, 2)));
-
 		// List<Edge> graphEdges = new ArrayList<Edge>(
-		// List.of(
-		// new Edge(0, 1, 4),
-		// new Edge(0, 7, 8),
-		// new Edge(1, 7, 11),
-		// new Edge(1, 2, 8),
-		// new Edge(7, 8, 7),
-		// new Edge(7, 6, 1),
-		// new Edge(2, 8, 2),
-		// new Edge(6, 8, 6),
-		// new Edge(2, 3, 7),
-		// new Edge(6, 5, 2),
-		// new Edge(2, 5, 4),
-		// new Edge(3, 5, 14),
-		// new Edge(3, 4, 9),
-		// new Edge(4, 5, 10)));
+		// 		List.of(new Edge(0, 1, 5),
+		// 				new Edge(1, 2, 1),
+		// 				new Edge(2, 3, 4),
+		// 				new Edge(0, 3, 5),
+		// 				new Edge(1, 3, 2)));
+
+		List<Edge> graphEdges = new ArrayList<Edge>(
+		List.of(
+		new Edge(0, 1, 4),
+		new Edge(0, 7, 8),
+		new Edge(1, 7, 11),
+		new Edge(1, 2, 8),
+		new Edge(7, 8, 7),
+		new Edge(7, 6, 1),
+		new Edge(2, 8, 2),
+		new Edge(6, 8, 6),
+		new Edge(2, 3, 7),
+		new Edge(6, 5, 2),
+		new Edge(2, 5, 4),
+		new Edge(3, 5, 14),
+		new Edge(3, 4, 9),
+		new Edge(4, 5, 10)));
 
 		// Step 1: sort the edges in non-decreasing order
 		// (increasing with repetition allowed)

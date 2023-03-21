@@ -5,6 +5,8 @@
 - Use greedy algorithm for the Kruskal's Minimum Spanning Tree problem. A minimum spanning tree is a subset of a graph with the same number of vertices as the graph and edges equal to the number of vertices -1. It also has a minimal cost for the sum of all edge weights in a spanning tree.
 - You must build a software that allow the user to define the vertices and the edges of the graph with the corresponding weights. Then your program must calculate and draw on the screen the corresponding graph as well as the MST of the graph.
 
+![alt text](./image/preview-app.png)
+
 ## Algorithm:
 
 ---
